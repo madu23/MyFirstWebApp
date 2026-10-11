@@ -7,12 +7,13 @@
 	<title>My Web Development Journey</title>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f7f7f7; color: #1f1f1f; line-height: 1.6; margin: 0; padding: 30px;">
+	<a class="skip-link" href="#main-content">Skip to main content</a>
 	<header style="background-color: #e9f0ff; padding: 25px; border-radius: 10px; border: 2px solid #c7d7ff;">
 		<h1 style="color: #1d3557; font-size: 2.5em; margin-bottom: 10px;">My Web Development Journey</h1>
 		<p style="font-size: 1.1em; margin: 0; color: #2f3d4d;">Learning how HTML structure, styling, accessibility, and usability contribute to creating effective web applications.</p>
 	</header>
 
-	<main style="max-width: 900px; margin: 25px auto;">
+	<main id="main-content" style="max-width: 900px; margin: 25px auto;">
 		<section id="about" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
 			<h2 style="color: #0d3b66;">Why I Am Learning HTML Styling</h2>
 			<p>I have become more interested in web development because it combines design, structure, and problem-solving. Learning HTML has helped me understand how information can be organised clearly and how pages can become more engaging for users.</p>
@@ -21,7 +22,7 @@
 
 		<section id="html-styling" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
 			<h2 style="color: #0d3b66;">HTML Styling and Formatting</h2>
-			<p style="font-family: Calibri, sans-serif; font-size: 20px; color: green;">I have learnt how to use different font styles, sizes and colours to make content clearer and more visually appealing.</p>
+			<p style="font-family: Calibri, sans-serif; font-size: 20px; color: #0d5d1a;">I have learnt how to use different font styles, sizes and colours to make content clearer and more visually appealing.</p>
 			<p>Using HTML attributes such as <strong>style</strong>, <strong>font-size</strong>, and <strong>color</strong> has helped me see how small changes can improve the user experience. I also learned the difference between using the <code>&lt;br&gt;</code> tag for a line break and the <code>&lt;pre&gt;</code> element to preserve text spacing.</p>
 		</section>
 
@@ -33,9 +34,9 @@
 
 		<section id="example" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
 			<h2 style="color: #0d3b66;">Practical Example</h2>
-			<img src="https://placehold.co/600x200/4f46e5/ffffff?text=My+Web+App" alt="A placeholder graphic representing a web page" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 10px;">
+			<img src="https://placehold.co/600x200/4f46e5/ffffff?text=My+Web+App" alt="A placeholder graphic representing a web page" width="600" height="200" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 10px;">
 			<p>This example image is used to represent how visual elements can improve the look of a webpage while still supporting the page structure.</p>
-			<p>To explore more examples, visit <a href="https://www.w3schools.com/html/" title="W3Schools HTML tutorial" target="_blank" rel="noopener noreferrer" style="color: #005a9c;">W3Schools HTML tutorial</a>, which demonstrates how links can direct users to external learning resources and support navigation.</p>
+			<p>To explore more examples, visit <a href="https://www.w3schools.com/html/" title="W3Schools HTML tutorial" target="_blank" rel="noopener noreferrer" aria-label="Open the W3Schools HTML tutorial in a new tab" style="color: #0b3d91;">W3Schools HTML tutorial</a>, which demonstrates how links can direct users to external learning resources and support navigation.</p>
 		</section>
 
 		<section id="future" style="padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
@@ -48,5 +49,25 @@
 	<footer style="text-align: center; padding: 20px; color: #3a3a3a;">
 		<p>Created as part of my web technologies learning journey.</p>
 	</footer>
+	<style>
+		.skip-link {
+			position: absolute;
+			left: -9999px;
+			top: 0;
+			background: #1d3557;
+			color: #ffffff;
+			padding: 10px 15px;
+			border-radius: 0 0 6px 6px;
+			z-index: 1000;
+		}
+		.skip-link:focus {
+			left: 10px;
+			top: 10px;
+		}
+		a:focus, button:focus, input:focus, textarea:focus, select:focus {
+			outline: 3px solid #ffbf47;
+			outline-offset: 3px;
+		}
+	</style>
 </body>
 </html>
