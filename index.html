@@ -5,69 +5,72 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A reflective web page about learning HTML styling, accessibility, and usability.">
 	<title>My Web Development Journey</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="menu.js" defer></script>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f7f7f7; color: #1f1f1f; line-height: 1.6; margin: 0; padding: 30px;">
+<body>
 	<a class="skip-link" href="#main-content">Skip to main content</a>
-	<header style="background-color: #e9f0ff; padding: 25px; border-radius: 10px; border: 2px solid #c7d7ff;">
-		<h1 style="color: #1d3557; font-size: 2.5em; margin-bottom: 10px;">My Web Development Journey</h1>
-		<p style="font-size: 1.1em; margin: 0; color: #2f3d4d;">Learning how HTML structure, styling, accessibility, and usability contribute to creating effective web applications.</p>
-	</header>
 
-	<main id="main-content" style="max-width: 900px; margin: 25px auto;">
-		<section id="about" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
-			<h2 style="color: #0d3b66;">Why I Am Learning HTML Styling</h2>
-			<p>I have become more interested in web development because it combines design, structure, and problem-solving. Learning HTML has helped me understand how information can be organised clearly and how pages can become more engaging for users.</p>
-			<p>During this module, I have explored how headings, paragraphs, links, images, and inline styling can improve both presentation and usability. I now understand that a good webpage is not only readable but also accessible and easy to navigate.</p>
-		</section>
+	<div class="page-shell">
+		<aside class="sidebar" aria-label="Page navigation">
+			<div class="brand">My Journey</div>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<nav class="nav" id="primary-nav">
+				<a href="#about">About</a>
+				<a href="#html-styling">HTML Styling</a>
+				<a href="#accessibility">Accessibility</a>
+				<a href="#example">Example</a>
+				<a href="#future">Next Steps</a>
+			</nav>
+		</aside>
 
-		<section id="html-styling" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
-			<h2 style="color: #0d3b66;">HTML Styling and Formatting</h2>
-			<p style="font-family: Calibri, sans-serif; font-size: 20px; color: #0d5d1a;">I have learnt how to use different font styles, sizes and colours to make content clearer and more visually appealing.</p>
-			<p>Using HTML attributes such as <strong>style</strong>, <strong>font-size</strong>, and <strong>color</strong> has helped me see how small changes can improve the user experience. I also learned the difference between using the <code>&lt;br&gt;</code> tag for a line break and the <code>&lt;pre&gt;</code> element to preserve text spacing.</p>
-		</section>
+		<main id="main-content" class="content">
+			<header class="hero">
+				<h1>My Web Development Journey</h1>
+				<p>Learning how HTML structure, styling, accessibility, and usability contribute to creating effective web applications.</p>
+			</header>
 
-		<section id="accessibility" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
-			<h2 style="color: #0d3b66;">Accessibility and Usability</h2>
-			<p>One of the most useful lessons from the weekly learning outcomes is that accessibility should be considered throughout the design process. A page should be easy to read, easy to understand, and easy to navigate for different users.</p>
-			<p>I have learned that good design goes beyond appearance. It includes clear headings, logical structure, meaningful text, and accessible content that supports users with different needs. This connects directly to the module learning outcomes around usability and accessibility.</p>
-		</section>
+			<section id="about" class="section-card">
+				<h2>Why I Am Learning HTML Styling</h2>
+				<p>I have become more interested in web development because it combines design, structure, and problem-solving. Learning HTML has helped me understand how information can be organised clearly and how pages can become more engaging for users.</p>
+				<p>During this module, I have explored how headings, paragraphs, links, images, and inline styling can improve both presentation and usability. I now understand that a good webpage is not only readable but also accessible and easy to navigate.</p>
+			</section>
 
-		<section id="example" style="margin-bottom: 25px; padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
-			<h2 style="color: #0d3b66;">Practical Example</h2>
-			<img src="https://placehold.co/600x200/4f46e5/ffffff?text=My+Web+App" alt="A placeholder graphic representing a web page" width="600" height="200" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 10px;">
-			<p>This example image is used to represent how visual elements can improve the look of a webpage while still supporting the page structure.</p>
-			<p>To explore more examples, visit <a href="https://www.w3schools.com/html/" title="W3Schools HTML tutorial" target="_blank" rel="noopener noreferrer" aria-label="Open the W3Schools HTML tutorial in a new tab" style="color: #0b3d91;">W3Schools HTML tutorial</a>, which demonstrates how links can direct users to external learning resources and support navigation.</p>
-		</section>
+			<section id="html-styling" class="section-card">
+				<h2>HTML Styling and Formatting</h2>
+				<p class="highlight">I have learnt how to use different font styles, sizes and colours to make content clearer and more visually appealing.</p>
+				<p>Using HTML attributes such as <strong>style</strong>, <strong>font-size</strong>, and <strong>color</strong> has helped me see how small changes can improve the user experience. I also learned the difference between using the <code>&lt;br&gt;</code> tag for a line break and the <code>&lt;pre&gt;</code> element to preserve text spacing.</p>
+			</section>
 
-		<section id="future" style="padding: 20px; background-color: #ffffff; border-radius: 10px; border: 1px solid #dfe7f5;">
-			<h2 style="color: #0d3b66;">What I Want to Learn Next</h2>
-			<p>My next step is to build on these skills by learning CSS, as this will allow me to improve layout, spacing, colour, and responsiveness. I also want to continue developing accessible design choices so my webpages are functional, clear, and user-friendly.</p>
-			<p><strong>Overall aim:</strong> create web applications that are not only visually appealing but also accessible, usable, and effective for a wide range of users.</p>
-		</section>
-	</main>
+			<section id="accessibility" class="section-card">
+				<h2>Accessibility and Usability</h2>
+				<p>One of the most useful lessons from the weekly learning outcomes is that accessibility should be considered throughout the design process. A page should be easy to read, easy to understand, and easy to navigate for different users.</p>
+				<p>I have learned that good design goes beyond appearance. It includes clear headings, logical structure, meaningful text, and accessible content that supports users with different needs. This connects directly to the module learning outcomes around usability and accessibility.</p>
+			</section>
 
-	<footer style="text-align: center; padding: 20px; color: #3a3a3a;">
-		<p>Created as part of my web technologies learning journey.</p>
-	</footer>
-	<style>
-		.skip-link {
-			position: absolute;
-			left: -9999px;
-			top: 0;
-			background: #1d3557;
-			color: #ffffff;
-			padding: 10px 15px;
-			border-radius: 0 0 6px 6px;
-			z-index: 1000;
-		}
-		.skip-link:focus {
-			left: 10px;
-			top: 10px;
-		}
-		a:focus, button:focus, input:focus, textarea:focus, select:focus {
-			outline: 3px solid #ffbf47;
-			outline-offset: 3px;
-		}
-	</style>
+			<section id="example" class="section-card">
+				<h2>Practical Example</h2>
+				<div class="image-box">
+					<img src="https://placehold.co/600x200/4f46e5/ffffff?text=My+Web+App" alt="A placeholder graphic representing a web page" width="600" height="200">
+				</div>
+				<p>This example image is used to represent how visual elements can improve the look of a webpage while still supporting the page structure.</p>
+				<p>To explore more examples, visit <a href="https://www.w3schools.com/html/" title="W3Schools HTML tutorial" target="_blank" rel="noopener noreferrer" aria-label="Open the W3Schools HTML tutorial in a new tab">W3Schools HTML tutorial</a>, which demonstrates how links can direct users to external learning resources and support navigation.</p>
+			</section>
+
+			<section id="future" class="section-card">
+				<h2>What I Want to Learn Next</h2>
+				<p>My next step is to build on these skills by learning CSS, as this will allow me to improve layout, spacing, colour and responsiveness. I also want to continue developing accessible design choices so my webpages are functional, clear, and user-friendly.</p>
+				<p><strong>Overall aim:</strong> create web applications that are not only visually appealing but also accessible, usable and effective for a wide range of users.</p>
+			</section>
+
+			<footer class="footer">
+				<p>Created as part of my web technologies learning journey.</p>
+			</footer>
+		</main>
+	</div>
 </body>
 </html>
