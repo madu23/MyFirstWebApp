@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A reflective web page about learning HTML styling, accessibility, and usability.">
 	<title>My Web Development Journey</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="menu.js" defer></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/menu.js" defer></script>
 </head>
 <body>
 	<a class="skip-link" href="#main-content">Skip to main content</a>
@@ -25,6 +25,7 @@
 				<a href="#accessibility">Accessibility</a>
 				<a href="#example">Example</a>
 				<a href="#future">Next Steps</a>
+				<a href="#contact">Contact Me</a>
 			</nav>
 		</aside>
 
@@ -65,6 +66,33 @@
 				<h2>What I Want to Learn Next</h2>
 				<p>My next step is to build on these skills by learning CSS, as this will allow me to improve layout, spacing, colour and responsiveness. I also want to continue developing accessible design choices so my webpages are functional, clear, and user-friendly.</p>
 				<p><strong>Overall aim:</strong> create web applications that are not only visually appealing but also accessible, usable and effective for a wide range of users.</p>
+			</section>
+
+			<section id="contact" class="section-card">
+				<h2>Contact Me</h2>
+				<form class="contact-form" id="contact-form" novalidate>
+					<div class="form-field">
+						<label for="contact-name">Name <span aria-hidden="true">(required)</span></label>
+						<input id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+						<p class="field-error" id="contact-name-error" aria-live="polite"></p>
+					</div>
+
+					<div class="form-field">
+						<label for="contact-email">Email <span aria-hidden="true">(required)</span></label>
+						<input id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="contact-email-error">
+						<p class="field-error" id="contact-email-error" aria-live="polite"></p>
+					</div>
+
+					<div class="form-field">
+						<label for="contact-message">Message <span aria-hidden="true">(required)</span></label>
+						<textarea id="contact-message" name="message" required aria-describedby="contact-message-hint contact-message-error"></textarea>
+						<p class="field-hint" id="contact-message-hint">Maximum 100 words.</p>
+						<p class="word-count" id="message-word-count">0 / 100 words</p>
+						<p class="field-error" id="contact-message-error" aria-live="polite"></p>
+					</div>
+
+					<button class="submit-button" id="contact-submit" type="submit" disabled>Send message</button>
+				</form>
 			</section>
 
 			<footer class="footer">

@@ -11,6 +11,7 @@
   --accent: #0d5d1a;
   --link: #0b3d91;
   --focus: #ffbf47;
+  --error: #a61b1b;
 }
 
 * {
@@ -182,6 +183,78 @@ select:focus {
   border: 1px solid var(--border);
 }
 
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #687786;
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: var(--text);
+  background: var(--panel);
+  font: inherit;
+}
+
+.form-field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field-error {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--error);
+  font-weight: 600;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--error) !important;
+}
+
+.word-count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.submit-button {
+  justify-self: start;
+  min-height: 44px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  background: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background: #687786;
+  cursor: not-allowed;
+}
+
 .footer {
   text-align: center;
   color: var(--muted);
@@ -244,5 +317,4 @@ select:focus {
   .section-card {
     padding: 1rem;
   }
-
 }
